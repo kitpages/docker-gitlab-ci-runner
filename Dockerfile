@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:v1.9.1
+FROM gitlab/gitlab-runner:v1.3.5
 
 RUN curl -sSL https://get.docker.com | sh
 RUN usermod -aG docker gitlab-runner
