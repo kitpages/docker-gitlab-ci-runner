@@ -5,7 +5,8 @@ RUN usermod -aG docker gitlab-runner
 
 RUN apt-get -qq update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -qq -y --no-install-recommends install\
-    build-essential &&\
+    build-essential \
+    nslookup &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
